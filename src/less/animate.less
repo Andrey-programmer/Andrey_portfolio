@@ -1,0 +1,33 @@
+
+
+
+.middle {
+    &.animated{
+        -webkit-animation-duration: 1.5s;
+                animation-duration: 1.5s;
+    }
+    
+}
+
+.animated{
+    &.fadeInRight,
+    &.fadeInLeft {
+        -webkit-animation-duration: 1s;
+                animation-duration: 1s;
+        // animation-delay:
+    }
+}
+
+.generate-duration(@n) when (@n > 0) {
+    .navbar-nav .nav-item {
+        &.item-@{n} {
+            -webkit-animation-duration:    @n*.4s;
+                    animation-duration:    @n*.4s;
+        }
+       
+    }
+    
+    .generate-duration(@n - 1);
+}
+
+.generate-duration(4);

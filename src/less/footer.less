@@ -1,0 +1,57 @@
+@import '\partails\params';
+
+
+
+footer {
+
+    h1 {
+        margin-bottom: 100px;
+    }
+
+    .contacts {
+        .header {
+        
+            text-align: center;            
+
+            h1 {
+                -webkit-box-shadow: 0 11px 0 white, 0 20px 20px black;
+                        box-shadow: 0 11px 0 white, 0 20px 20px black;           
+            }    
+
+            div {
+                letter-spacing: 4px;
+                font-size: 1.2em;
+
+                &.education {
+                    text-align: justify;
+                }
+              
+            }              
+            
+        }
+
+        .item {
+            text-align: center;
+            margin-bottom: 2rem;
+            .ico {
+                margin-bottom: 1rem;
+                span{               
+                    i {
+                        color: @blueIconsColor ;
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright {
+        background-color: @content_text_color;
+        color: white;
+        margin-bottom: 0;
+
+        i {
+            color: @redIconsColor;
+            cursor: pointer;
+        }
+    }
+}
