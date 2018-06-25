@@ -77,9 +77,9 @@ $('.navbar-nav .nav-item a').click(function () {
         }
     
     });
-    animate.last().each(function(){      
+/*     animate.last().each(function(){      
         // console.log($(this), $(this).data('animation'), $(this).attr('class'), $('.animated').index($(this)));
-    });
+    }); */
  
 });
 // console.log($('.animated'));

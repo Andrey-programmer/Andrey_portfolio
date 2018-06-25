@@ -3599,10 +3599,6 @@ header.main_display .nav-menu .navbar ul li:hover a {
   color: white;
   text-decoration: underline;
 }
-header.main_display h1 {
-  font-weight: 600;
-  color: #072704;
-}
 header.main_display p {
   letter-spacing: 5px;
   font-weight: bold;
@@ -3623,7 +3619,9 @@ header.main_display .middle {
   background-color: rgba(255, 255, 255, 0.6);
 }
 header.main_display .middle h1 {
-  font-size: 2rem;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #072704;
 }
 header.main_display .middle .skills {
   font-size: 1rem;
@@ -3634,7 +3632,7 @@ header.main_display .empty {
 main {
   padding: 15px;
 }
-main h1 {
+main h2 {
   margin-bottom: 100px;
 }
 main .about_me {
@@ -3650,7 +3648,7 @@ main .about_me div {
 main .about_me .header {
   text-align: center;
 }
-main .about_me .header h1 {
+main .about_me .header h2 {
   box-shadow: 0 11px 0 white, 0 20px 20px black;
 }
 main .about_me .header div {
@@ -3736,7 +3734,7 @@ main .resume {
 main .resume .header {
   text-align: center;
 }
-main .resume .header h1 {
+main .resume .header h2 {
   box-shadow: 0 11px 0 white, 0 20px 20px black;
 }
 main .resume .header div {
@@ -3748,7 +3746,6 @@ main .resume .header div.education {
 }
 main .resume h2 {
   text-align: center;
-  margin-bottom: 50px;
 }
 main .resume .subheader {
   text-align: center;
@@ -3871,7 +3868,7 @@ main .portfolio .header {
   text-align: center;
   color: white;
 }
-main .portfolio .header h1 {
+main .portfolio .header h2 {
   padding: 5px 25px;
   margin-left: auto;
   margin-right: auto;
@@ -3886,13 +3883,13 @@ main .portfolio .header div {
 main .portfolio .header div.education {
   text-align: justify;
 }
-footer h1 {
+footer h2 {
   margin-bottom: 100px;
 }
 footer .contacts .header {
   text-align: center;
 }
-footer .contacts .header h1 {
+footer .contacts .header h2 {
   box-shadow: 0 11px 0 white, 0 20px 20px black;
 }
 footer .contacts .header div {
@@ -4053,4 +4050,4 @@ footer .copyright i {
 }
 
 
-/*# sourceMappingURL=style.1f35b071d2506e1b0446.css.map*/
+/*# sourceMappingURL=style.a23f76771d1e620ad174.css.map*/
