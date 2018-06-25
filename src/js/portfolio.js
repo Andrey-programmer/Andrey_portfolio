@@ -1,4 +1,4 @@
 // import 'jquery';
-$('.card').click(()=>{    
-    location.assign("http://andrey_programmer.ru") || location.assign("#");    
+$('.card:first').click(()=>{    
+    location.assign("http://andrey-programmer.ru") || location.assign("#");    
 });   
