@@ -1,0 +1,19 @@
+@import 'params';
+
+.h2_black_shadow() {
+    -webkit-box-shadow: 0 11px 0 white, 0 20px 20px black;
+    box-shadow: 0 11px 0 white, 0 20px 20px black;  
+}
+
+.h2_portfolio_shadow() {
+    -webkit-box-shadow: 0 11px 0 @content_text_color, 0 20px 20px white;
+    box-shadow: 0 11px 0 @content_text_color, 0 20px 20px white;   
+}
+
+.underline() {
+    line-height: 3rem;
+    border-bottom: 2px solid #000000;
+    width: 60%;
+    margin: auto;
+    padding: 12px;
+}
