@@ -32,7 +32,7 @@ module.exports = {
     entry: { // Тут писать в порядке подключения в index.html
         // vendor: ['jquery'],
         bundle: './js/index.js',
-        metrica: './js/yandex_metrica.js'
+        // metrica: './js/yandex_metrica.js'
     },
     output: {
         filename: '[name].[hash].js', // Можно filename: '[name].[chunkhash].js' но будут длинные имена файлов
@@ -96,7 +96,7 @@ module.exports = {
         
         new HtmlWebpackPlugin({
             template: './template.html',
-            chunks: [/* 'vendor', */  'bundle', 'metrica'], //скрипты. которые нужно подключить к html
+            chunks: [/* 'vendor', */  'bundle'/* , 'metrica' */], //скрипты. которые нужно подключить к html
             name: 'index.html',
             hash: true,
             inject: true
@@ -105,7 +105,7 @@ module.exports = {
        new MiniCssExtractPlugin({
             filename: 'style.[contenthash].css',
         }),
-        // new OptimizeCSSAssetsPlugin({}), // Минимизирует код css для отображения sourcemap нужно закомментировать данный плагин
+        new OptimizeCSSAssetsPlugin({}), // Минимизирует код css для отображения sourcemap нужно закомментировать данный плагин
         new CleanWebpackPlugin(['dist']), // Плагин очищает папку dist перед пересозданием файлов  (не работает при webpack -w, работает при webpack)
         new webpack.HotModuleReplacementPlugin({})
     ], 
