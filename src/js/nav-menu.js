@@ -13,8 +13,7 @@ $('button.navbar-toggler').dblclick(function (event) {
     event.stopPropagation();
 })
 
-$('.nav-menu li').click(() => {
-    1
+$('.nav-menu li').click(() => {   
     $('.navbar-toggler').click();
 })
 
