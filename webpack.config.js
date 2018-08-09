@@ -27,7 +27,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 
 module.exports = {
-    mode: "development",
+    mode: "production", // 'production' | "development"
     context: path.resolve(__dirname, 'src'),
     entry: { // Тут писать в порядке подключения в index.html
         // vendor: ['jquery'],
@@ -90,7 +90,8 @@ module.exports = {
         splitChunks: {
             chunks: "all",
             minChunks: 2
-        }
+        },
+        minimize: true
     },
     plugins: [
         
