@@ -1,6 +1,6 @@
-import 'jquery';
+// import 'jquery'; 
 
-let hrefs = $('.item').has('.fa-html5, .fa-vk');
+let hrefs = $('.item').has('.fa-html5, .fa-vk, .fa-whatsapp, .fa-envelope');
 let vkFooter = $('.fa-vk');
 
 
@@ -26,14 +26,20 @@ hrefs.mouseout(function (event) {
 
 
 hrefs.has('.fa-html5').click(() => {
-    location.assign('http://andrey_programmer.ru');
+    location.assign('http://andrey-programmer.ru'); 
 });
 
 hrefs.has('.fa-vk').click(() => {
     window.open('https://vk.com/l0vec_snov', '_blank')
 });
 
+
 vkFooter.click(() => {
+    window.open('https://vk.com/l0vec_snov', '_blank')
+});
+
+hrefs.has('.fa-vk').click(() => {
+
     window.open('https://vk.com/l0vec_snov', '_blank')
 });
 

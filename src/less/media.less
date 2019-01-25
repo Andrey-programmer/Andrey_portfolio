@@ -1,0 +1,46 @@
+@import '\partails\params';
+@import '\partails\mixins';
+
+
+
+@media only screen and (max-width : 992px) {
+    .description,
+    .photo,
+    .personal {
+        margin-bottom:40px;
+    }  
+}
+
+@media only screen and (max-width : 576px) {
+ 
+    h2 {
+        .h2_black_shadow;
+    }    
+
+    .portfolio h2 {
+        .h2_portfolio_shadow;
+    }
+   
+    main .portfolio .card .card-img-top {
+        transform:none;
+    }
+
+    main .portfolio .card:hover .card-look,
+    main .portfolio .card:active .card-look,
+      {
+        opacity: 0;
+    }
+
+}
+
+
+@media only screen and (max-width : 480px) {
+    h2 {
+        margin-bottom: 100px;
+    }
+
+    .personal {
+        margin-bottom: 15px;
+    }  
+}
+

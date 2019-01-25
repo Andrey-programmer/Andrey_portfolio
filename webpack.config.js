@@ -27,11 +27,12 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 
 
 module.exports = {
-    mode: "development",
+    mode: "production", // 'production' | "development"
     context: path.resolve(__dirname, 'src'),
     entry: { // Тут писать в порядке подключения в index.html
         // vendor: ['jquery'],
-        bundle: './js/index.js'
+        bundle: './js/index.js',
+        // metrica: './js/yandex_metrica.js'
     },
     output: {
         filename: '[name].[hash].js', // Можно filename: '[name].[chunkhash].js' но будут длинные имена файлов
@@ -89,13 +90,14 @@ module.exports = {
         splitChunks: {
             chunks: "all",
             minChunks: 2
-        }
+        },
+        minimize: true
     },
     plugins: [
         
         new HtmlWebpackPlugin({
             template: './template.html',
-            chunks: [/* 'vendor', */ 'bundle'], //скрипты. которые нужно подключить к html
+            chunks: [/* 'vendor', */  'bundle'/* , 'metrica' */], //скрипты. которые нужно подключить к html
             name: 'index.html',
             hash: true,
             inject: true
@@ -104,7 +106,7 @@ module.exports = {
        new MiniCssExtractPlugin({
             filename: 'style.[contenthash].css',
         }),
-        // new OptimizeCSSAssetsPlugin({}), // Минимизирует код css для отображения sourcemap нужно закомментировать данный плагин
+        new OptimizeCSSAssetsPlugin({}), // Минимизирует код css для отображения sourcemap нужно закомментировать данный плагин
         new CleanWebpackPlugin(['dist']), // Плагин очищает папку dist перед пересозданием файлов  (не работает при webpack -w, работает при webpack)
         new webpack.HotModuleReplacementPlugin({})
     ], 
@@ -117,5 +119,5 @@ module.exports = {
         progress: true,
         open: true, //чтобы страница автоматически запускалась при использовании dev-сервера     
     },
-    devtool : 'source-map' // Для dev-разработки!!! для production 'eval-sourcemap'
+    devtool : 'eval-sourcemap'//source-map' - Для dev-разработки!!! для production 'eval-sourcemap'
 };

@@ -2,7 +2,7 @@
 
 
 header.main_display {
-    margin-bottom: 120px;
+      margin-bottom: 10px;
     .nav-menu {             
         position: fixed;        
         z-index: 50;
@@ -24,7 +24,7 @@ header.main_display {
             margin-right: 1rem;
             margin-top: 1rem;
               
-             .lines { 
+            .lines { 
                 width: 30px; 
                 height: 30px;
                 padding: 3px 0;
@@ -69,9 +69,12 @@ header.main_display {
             // height: 100%;
 
             ul {
+                position: relative;
+
                 li{
                     -webkit-transition: all .3s;
                     transition: all .3s;
+
                     a {
                         color: white;
                         display: block;
@@ -86,11 +89,18 @@ header.main_display {
                     }
 
                     &:hover {
-                        background-color: rgba(255, 255, 255, 0.3);
+                        background-color: rgba(0, 0, 0, 0.3);
                         a{
-                            color: white;
-                            text-decoration: underline;
+                            color: rgb(241, 58, 25); /* @redIconsColor; */  
+                            // text-decoration: underline;                         
                         }
+                    }
+
+                    &.background {
+                        
+                        width: 200px;
+                        margin: auto;
+
                     }
                 }
             }

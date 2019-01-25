@@ -18,7 +18,7 @@ $('section h1').addClass('animated').data('animation', 'fadeInUp');
 var scrollPos = 0;
 
 // Применяем анимацию только на устройствах с экраном больше 992px
-if (window.matchMedia('(min-width: 992px)').matches) {
+if (window.matchMedia('(min-width: 768px)').matches) { 
 
     //Прослушка скролла
     $(window).scroll(function () {
@@ -27,7 +27,7 @@ if (window.matchMedia('(min-width: 992px)').matches) {
             // console.log('Down');
 
             $('.animated').not('.middle').each(function () {
-                if ($(document).scrollTop() + $(window).height() > $(this).offset().top && $(document).scrollTop() - $(this).offset().top < $(this).height()) {
+                if ($(document).scrollTop() + $(window).height() + 25 > $(this).offset().top && $(document).scrollTop() - $(this).offset().top < $(this).height()) {
                     $(this).css({
                         'opacity': 1
                     }).removeClass('fadeOutDown').addClass($(this).data('animation'));

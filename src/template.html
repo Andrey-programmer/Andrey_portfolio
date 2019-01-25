@@ -7,7 +7,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <link rel="shortcut icon" href="image/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href=<%=require("./image/favicon.ico")%> type="image/x-icon">
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
         crossorigin="anonymous">
@@ -51,6 +51,7 @@
                                     <li class="nav-item item-4 animated">
                                         <a class="nav-link" href="#contacts__">Контакты</a>
                                     </li>
+                                    <li class="background"></li>
                                 </ul>
                             </div>
                         </nav>
@@ -66,12 +67,12 @@
                         <img src=<%=require( "./image/logo.png")%> alt="logo">
                         <span>Сайт-портфолио веб-разработчика</span>
                     </p>
-                    <div class="middle animated fadeInUp p-1" data-animation="fadeInUp">
+                    <div class="middle animated fadeInUp p-2" data-animation="fadeInUp">
                         <h1 class='mb-4'>Андрей Кадочников</h1>
                         <p class='web_html'>Web-разработчик /
                             <br class="d-sm-none"> HTML-верстальщик</p>
                         <p class="skills">HTML5 / CSS3 / JavaScript / ES6 / TypeScript / jQuery / LESS
-                            <br> / SASS / Gulp / Bootstrap 4 / Webpack 4 / RxJS / Git / БЭМ </p>
+                            <br> / SASS / Gulp / Bootstrap 4 / Webpack 4 / RxJS / Git / БЭМ <br>Angular 6</p>
                     </div>
 
                     <div class="empty"></div>
@@ -84,16 +85,16 @@
         <section class="about_me" id="about__me">
             <div class="container">
                 <div class="row justify-content-center">
-                    <div class="header d-flex flex-column mb-5">
-                        <h2 class="animated mx-3 mt-5" data-animation="fadeInUp" >Обо мне</h2>
-
+                    <div class="header animated d-flex flex-column mb-5" data-animation="fadeInUp" >
+                        <h2 class="mx-3 mt-5" >Обо мне</h2>
                         <div>Познакомимся поближе</div>
-
+                        <div class="underline"></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="col-lg-4 description">
                         <h4>Немного о себе</h4>
+                        <br class='d-xl-none'>
                         <div class='article animated' data-animation="fadeInLeft">
                             Доброго времени суток, меня зовут Андрей. Занимаюсь вёрсткой HTML-шаблонов и front-end разработкой (программированием сайтов).
                             Мои Ключевые навыки:
@@ -139,8 +140,11 @@
                                 <span>
                                     <i class="fas fa-circle" aria-hidden="true"></i>
                                 </span> БЭМ
+                                <span>
+                                    <i class="fas fa-circle" aria-hidden="true"></i>
+                                </span> Angular 2+
                             </div>
-                            <br> Пользуюсь последними версиями передовых продуктов Bootstrap и Webpack, что гарантирует что Ваш
+                            <br> Пользуюсь последними версиями передовых продуктов Bootstrap и Webpack, это гарантирует что Ваш
                             сайт будет адаптивным и отлично выглядеть на всех устройствах. Вы можете заказать у меня разработку
                             сайта с нуля или связаться со мной для сотрудничества.
                         </div>
@@ -158,16 +162,16 @@
                             <div class="d-flex flex-column justify-content-between">
                                 <div class="profession">Профессиональное создание сайтов
                                     <br> (front-end developer): разработка сайтов, вёрстка адаптивных HTML-шаблонов, создание
-                                    спецэффектов с использованием JavaScript, jQuery, Bootstrap</div>
+                                    спецэффектов с использованием JavaScript, jQuery, Bootstrap, разработка сайтов - приложений на Angular</div>
                                 <div class="birthday">День Рождения 13 февраля 1982 года</div>
                                 <div class="skype">
                                     <span>
                                         <i class="fab fa-skype"></i>
                                     </span> Skype: Andrey-1302</div>
-                                <div class="e-mail">
+                                <div class="e-mail">                       
                                     <span>
                                         <i class="fas fa-envelope"></i>
-                                    </span> E-mail : andrey.programmer.1302@gmail.com</div>
+                                    </span>  <a href="mailto:andrey.programmer.1302@gmail.com"> E-mail : andrey.programmer.1302@gmail.com</a></div>
                                 <div class="my_site">
                                     <span class="html">
                                         <i class="fab fa-html5"></i>
@@ -187,16 +191,15 @@
         <section class="resume pt-5" id="resume__">
             <div class="container">
                 <div class="row justify-content-center mb-5">
-                    <div class="header d-flex flex-column mb-5">
-                        <h2 class="animated mx-3" data-animation="fadeInUp">Резюме</h2>
-
+                    <div class="header animated d-flex flex-column mb-5"  data-animation="fadeInUp">
+                        <h2 class="mx-3">Резюме</h2>
                         <div>Мои знания и образование</div>
-
+                        <div class="underline"></div>
                     </div>
                 </div>
                 <div class="row">
                     <div class="education col-sm-6 ">
-                        <h2>Образование</h2>
+                        <h3>Образование</h3>
                         <div class="ico">
                             <span>
                                 <i class="fa fa-graduation-cap fa-4x" aria-hidden="true"></i>
@@ -205,7 +208,7 @@
                         <div class="wrappanim animated" data-animation="fadeInLeft">
                             <div class='subheader'>Высшее</div>
                             <div>Южно-Уральский Государственный Университет, 2007г. Факультет технологий машиностроения. Специализация:
-                                Автоматизация тех. процессов и производств в машиностроении. Квалификация - специалист.
+                                Автоматизация тех. процессов и производств в машиностроении. Квалификация - инженер.
                             </div>
                         </div>
                         <div class="wrappanim animated" data-animation="fadeInLeft">
@@ -221,7 +224,7 @@
                         </div>
                     </div>
                     <div class="col-sm-6 border-left">
-                        <h2>Знания и навыки</h2>
+                        <h3>Знания и навыки</h3>
                         <div class="ico">
                             <span>
                                 <i class="fa fa-lightbulb-o fa-4x" aria-hidden="true"></i>
@@ -233,7 +236,7 @@
                             <div>
                                 <div>HTML-разметка, таблицы стилей CSS, препроцессоры LESS/SASS, язык программирования JavaScript,
                                     его современный синтаксис ES6, библиотека jQuery, фреймворк Bootstrap, бандлеры Gulp
-                                    и Webpack</div>
+                                    и Webpack, фреймворк Angular 2+</div>
                             </div>
                             <div class="wrappanim animated" data-animation="fadeInRight">
                                 <div class='subheader'>Программы</div>
@@ -242,7 +245,7 @@
                         </div>
                         <div class="wrappanim animated" data-animation="fadeInRight">
                             <div class='subheader'>Ближайшие планы</div>
-                            <div>В скором времени планирую изучение фреймворков React, Angular и Vue для разработки Web-приложений</div>
+                            <div>В скором времени планирую изучение фреймворков Vue, React для разработки Web-приложений и full-stack разработку на Angular 6 </div>
                         </div>
                     </div>
                 </div>
@@ -251,11 +254,11 @@
         <section class="portfolio" id="portfolio__">
             <div class="container">
                 <div class="row">
-                    <div class="header d-flex flex-column mb-5 mx-auto">
-                        <h2 class="animated" data-animation="fadeInUp">Портфолио</h2>
+                    <div class="header animated d-flex flex-column mb-5 mx-auto" data-animation="fadeInUp">
+                        <h2>Портфолио</h2>
 
                         <div>Здесь будут размещаться примеры моих работ
-                            <br class="d-md-none"> куда я надеюсь попадёт и Ваш сайт :)</div>
+                            <br class="d-md-none"> куда, я надеюсь, попадёт и Ваш сайт :)</div>
                     </div>
                 </div>
                 <div class="row mb-sm-5">
@@ -273,17 +276,18 @@
                                 </div>
                             </div>
                             <div class='card-body-2 d-flex'>
-                                <div class="card-look">Посмотреть</div>
+                                <div class="card-look">Посмотреть</div> 
                             </div>
                         </div>
                         <div class="card">
-                            <img class="card-img-top" src="http://via.placeholder.com/600x600?text=Picture" alt="Card image cap">
+                                <!-- src=" http://via.placeholder.com/600x600?text=Picture" -->
+                            <img class="card-img-top" src=<%=require ("./image/zouk-pro_andrey.jpg")%> alt="Card image cap">
                             <div class="card-body">
                                 <div class='wrapper'>
-                                    <h5 class="card-title">http://_______________</h5>
-                                    <p class="card-text">This card has supporting...</p>
+                                    <h5 class="card-title">Zouk-pro.ru</h5>
+                                    <p class="card-text">Landing-page преподавателей танцев</p>
                                     <p class="card-text">
-                                        <small class="text-muted">Last updated 3 mins ago</small>
+                                        <small class="text-muted">2018 г.</small>
                                     </p>
                                 </div>
                             </div>
@@ -292,10 +296,10 @@
                             </div>
                         </div>
                         <div class="card">
-                            <img class="card-img-top" src="http://via.placeholder.com/600x600?text=Picture" alt="Card image cap">
+                            <img class="card-img-top" src=<%=require ("./image/additional_display.jpg")%> alt="Card image cap">
                             <div class="card-body">
                                 <div class='wrapper'>
-                                    <h5 class="card-title">http://_______________</h5>
+                                    <h5 class="card-title">any my site</h5>
                                     <p class="card-text">This card has supporting...</p>
                                     <p class="card-text">
                                         <small class="text-muted">Last updated 3 mins ago</small>
@@ -311,10 +315,10 @@
                 <div class="row mb-sm-5">
                     <div class="card-deck  text-center">
                         <div class="card">
-                            <img class="card-img-top" src="http://via.placeholder.com/600x600?text=Picture" alt="Card image cap">
+                            <img class="card-img-top" src=<%=require ("./image/additional_display.jpg")%> alt="Card image cap">
                             <div class="card-body">
                                 <div class='wrapper'>
-                                    <h5 class="card-title">http://_______________</h5>
+                                    <h5 class="card-title">any my site</h5>
                                     <p class="card-text">This card has supporting...</p>
                                     <p class="card-text">
                                         <small class="text-muted">Last updated 3 mins ago</small>
@@ -326,10 +330,10 @@
                             </div>
                         </div>
                         <div class="card">
-                            <img class="card-img-top" src="http://via.placeholder.com/600x600?text=Picture" alt="Card image cap">
+                            <img class="card-img-top" src=<%=require ("./image/additional_display.jpg")%> alt="Card image cap">
                             <div class="card-body">
                                 <div class='wrapper'>
-                                    <h5 class="card-title">http://_______________</h5>
+                                    <h5 class="card-title">any my site</h5>
                                     <p class="card-text">This card has supporting...</p>
                                     <p class="card-text">
                                         <small class="text-muted">Last updated 3 mins ago</small>
@@ -341,10 +345,10 @@
                             </div>
                         </div>
                         <div class="card">
-                            <img class="card-img-top" src="http://via.placeholder.com/600x600?text=Picture" alt="Card image cap">
+                            <img class="card-img-top" src=<%=require ("./image/additional_display.jpg")%> alt="Card image cap">
                             <div class="card-body">
                                 <div class='wrapper'>
-                                    <h5 class="card-title">http://_______________</h5>
+                                    <h5 class="card-title">any my site</h5>
                                     <p class="card-text">This card has supporting...</p>
                                     <p class="card-text">
                                         <small class="text-muted">Last updated 3 mins ago</small>
@@ -360,10 +364,10 @@
                 <div class="row mb-sm-5">
                     <div class="card-deck last-card text-center">
                         <div class="card">
-                            <img class="card-img-top" src="http://via.placeholder.com/600x600?text=Picture" alt="Card image cap">
+                            <img class="card-img-top" src=<%=require ("./image/additional_display.jpg")%> alt="Card image cap">
                             <div class="card-body">
                                 <div class='wrapper'>
-                                    <h5 class="card-title">http://_______________</h5>
+                                    <h5 class="card-title">any my site</h5>
                                     <p class="card-text">This card has supporting...</p>
                                     <p class="card-text">
                                         <small class="text-muted">Last updated 3 mins ago</small>
@@ -375,10 +379,10 @@
                             </div>
                         </div>
                         <div class="card">
-                            <img class="card-img-top" src="http://via.placeholder.com/600x600?text=Picture" alt="Card image cap">
+                            <img class="card-img-top" src=<%=require ("./image/additional_display.jpg")%> alt="Card image cap">
                             <div class="card-body">
                                 <div class='wrapper'>
-                                    <h5 class="card-title">http://_______________</h5>
+                                    <h5 class="card-title">any my site</h5>
                                     <p class="card-text">This card has supporting...</p>
                                     <p class="card-text">
                                         <small class="text-muted">Last updated 3 mins ago</small>
@@ -390,10 +394,10 @@
                             </div>
                         </div>
                         <div class="card">
-                            <img class="card-img-top" src="http://via.placeholder.com/600x600?text=Picture" alt="Card image cap">
+                            <img class="card-img-top" src=<%=require ("./image/additional_display.jpg")%> alt="Card image cap">
                             <div class="card-body">
                                 <div class='wrapper'>
-                                    <h5 class="card-title">http://_______________</h5>
+                                    <h5 class="card-title">any my site</h5>
                                     <p class="card-text">This card has supporting...</p>
                                     <p class="card-text">
                                         <small class="text-muted">Last updated 3 mins ago</small>
@@ -412,12 +416,11 @@
     <footer>
         <section class="contacts" id="contacts__">
             <div class="container">
-                <div class="row justify-content-center mb-1 pt-lg-5">
-                    <div class="header d-flex flex-column mb-5">
-                        <h2 class="animated mx-3" data-animation="fadeInUp">Контакты</h2>
-
+                <div class="row justify-content-center mb-1 pt-lg-4">
+                    <div class="header animated d-flex flex-column mb-5"  data-animation="fadeInUp">
+                        <h2 class="mx-3">Контакты</h2>
                         <div>связаться со мной</div>
-
+                        <div class="underline"></div>
                     </div>
                 </div>
                 <div class="row">
@@ -433,12 +436,14 @@
                         </div>
                         <div class="item">
                             <div class="ico">
+                                <a href="mailto:andrey.programmer.1302@gmail.com">
                                 <span>
                                     <i class="fas fa-envelope fa-2x"></i>
                                 </span>
+                                </a>
                             </div>
-                            <h3>E-mail:</h3>
-                            <p>andrey.programmer.1302@gmail.com</p>
+                            <h3><a href="mailto:andrey.programmer.1302@gmail.com">E-mail:</a></h3>
+                            <p> <a href="mailto:andrey.programmer.1302@gmail.com">andrey.programmer.1302@gmail.com</a></p>
                         </div>
                         <div class="item">
                             <div class="ico">
@@ -471,18 +476,20 @@
                         </div>
                         <div class="item">
                             <div class="ico">
-                                <span class="mobil">
-                                    <i class="fas fa-mobile-alt fa-2x"></i>
-                                </span> /
-                                <span>
-                                    <i class="fab fa-whatsapp fa-2x"></i>
-                                </span>
+                                <a href="tel:+79774638113">
+                                    <span class="mobil">
+                                        <i class="fas fa-mobile-alt fa-2x"></i>
+                                    </span> /
+                                    <span>
+                                        <i class="fab fa-whatsapp fa-2x"></i>
+                                    </span>
+                                </a>
                             </div>
-                            <h3>телефон / whatsapp</h3>
-                            <p>+7 977 4638113</p>
+                            <h3><a href="tel:+79774638113">телефон / whatsapp</a></h3>
+                            <p><a href="tel:+79774638113">+7 977 4638113</a></p>
                         </div>
                     </div>
-                </div>
+                </div> 
             </div>
         </section>
         <div class="copyright">

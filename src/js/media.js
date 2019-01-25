@@ -16,3 +16,7 @@ if($(window).width() < 640) {
     console.log( $('header p.web_html:contains("Web-разработчик /")'));
 
 }
+
+if($(window).width() < 576) {
+    $('.underline').addClass('d-none');
+}

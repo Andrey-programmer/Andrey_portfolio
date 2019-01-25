@@ -1,12 +1,10 @@
 @import '\partails\params';
-
+@import '\partails\mixins';
 
 
 main {
     padding: 15px;
-    h2 {
-        margin-bottom: 100px;
-    } 
+
     .about_me {
         margin-bottom: 100px;
 
@@ -15,36 +13,29 @@ main {
             margin-bottom: 25px;
         }
 
-        div {
-            margin-bottom: 20px; 
-        }
+
         .header {
         
-            text-align: center;
-
-            h2 {
-                -webkit-box-shadow: 0 11px 0 white, 0 20px 20px black;
-                        box-shadow: 0 11px 0 white, 0 20px 20px black; 
-                              
-            }    
+            text-align: center;           
 
             div {
                 letter-spacing: 4px;
                 font-size: 1.2em;
             }
             
+            .underline {
+                .underline;
+            };
+          
         }
 
         div{
 
             color: @content_text_color;
             &.description {
-                .article {
-                    text-align: justify;
-                
+                .article {                     
                     .skills {
-                        margin-bottom: -23px;
-                        text-align: justify;
+                        margin-bottom: -23px;                      
                         span {
                             margin: 0 3px 0 2px ;
                             font-size: 6px;
@@ -94,15 +85,22 @@ main {
                         }
                     }
                     &.e-mail {
-                        span {
+                       
+                            
+                        span {                               
                             color: @blueIconsColor ;
                             font-size: 1.3em;
                             i {
                                 -webkit-transform: translateY(2px);
                                         transform: translateY(2px);
-                            }
-                        }
+                            }                           
+                        }    
+                        a {
+                            color: @content_text_color;
+                            text-decoration: underline;
+                        }                      
                     }
+
                     &.my_site {
                         a { 
                             color: inherit;
@@ -133,15 +131,11 @@ main {
     
     .resume {
         margin-bottom: 150px;
-    
+ 
+
         .header {
         
             text-align: center;            
-
-            h2 {
-                -webkit-box-shadow: 0 11px 0 white, 0 20px 20px black;
-                        box-shadow: 0 11px 0 white, 0 20px 20px black;           
-            }    
 
             div {
                 letter-spacing: 4px;
@@ -151,7 +145,13 @@ main {
                     text-align: justify;
                 }
               
-            }              
+            }    
+            
+            .underline {
+                .underline;
+            };
+          
+         
             
         }
 
@@ -181,7 +181,7 @@ main {
 
     .portfolio {
         background-color: @content_text_color;
-        padding-top: 100px;
+        padding-top: 50px;
         
         .last-card {
             margin-bottom: 8rem;
@@ -227,7 +227,7 @@ main {
                     text-transform: uppercase;
                     font-size: 1rem;
                     margin-bottom: 1rem;
-                    color: @cardGreenColor;                   
+                    color: @redIconsColor;                   
                 }
 
                 .wrapper {
@@ -263,7 +263,7 @@ main {
                     transition: opacity .3s, color .3s, -webkit-transform .3s;
                     transition: opacity .3s, color .3s, transform .3s;
                     transition: opacity .3s, color .3s, transform .3s, -webkit-transform .3s; 
-                    border: 3px solid @cardGreenColor;            
+                    border: 3px solid @redIconsColor;            
                     padding: 5px 20px;                 
                 }
             }
@@ -281,7 +281,8 @@ main {
                
             }
 
-            &:hover {
+            &:hover,
+            &:active {
                 cursor: pointer;
                 -webkit-box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
                         box-shadow: 0 0 30px rgba(0, 0, 0, 0.9);
@@ -324,22 +325,14 @@ main {
             h2 {
                 padding : 5px 25px;
                 margin-left: auto;
-                margin-right: auto;
-                -webkit-box-shadow: 0 11px 0 @content_text_color, 0 20px 20px white;
-                        box-shadow: 0 11px 0 @content_text_color, 0 20px 20px white;   
-                   
+                margin-right: auto;                  
             }    
 
             div {
                 max-width: 85%;
                 margin: auto;
                 letter-spacing: 4px;
-                font-size: 1.2em;
-
-                &.education {
-                    text-align: justify;
-                }
-              
+                font-size: 1.2em;              
             }              
             
         }
