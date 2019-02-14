@@ -6,3 +6,13 @@ $('.card-deck:first .card:first').click(()=>{
 $('.card-deck:first .card:nth-of-type(2)').click(() => {
    window.open("http://zouk-pro.ru", '_blank') || location.assign('#');
 });
+
+$('.card-deck:first .card:nth-of-type(3)').click(() => {
+   window.open("https://react-spa-tests.firebaseapp.com", '_blank') || location.assign('#');
+});
+$('.card-deck:eq(1) .card:first').click(() => {
+   window.open("https://vue-spa-project.firebaseapp.com", '_blank') || location.assign('#');
+});
+$('.card-deck:eq(1) .card:nth-of-type(2)').click(() => {
+   window.open("https://fierce-harbor-28995.herokuapp.com", '_blank') || location.assign('#');
+});

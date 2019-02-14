@@ -103,8 +103,9 @@ module.exports = {
             inject: true
         }),        
         require('autoprefixer'),
-       new MiniCssExtractPlugin({
+        new MiniCssExtractPlugin({
             filename: 'style.[contenthash].css',
+            chunkFilename: "[id].css"
         }),
         new OptimizeCSSAssetsPlugin({}), // Минимизирует код css для отображения sourcemap нужно закомментировать данный плагин
         new CleanWebpackPlugin(['dist']), // Плагин очищает папку dist перед пересозданием файлов  (не работает при webpack -w, работает при webpack)
