@@ -23,3 +23,6 @@ $('.card-deck:eq(1) .card:nth-of-type(3)').click(() => {
 $('.card-deck:eq(2) .card:first').click(() => {
    window.open("https://ssr-blog-nuxt.herokuapp.com", '_blank') | location.assign('#');
 })
+$('.card-deck:eq(2) .card:nth-of-type(2)').click(() => {
+   window.open("https://polar-coast-11040.herokuapp.com/courses", '_blank') || location.assign('#');
+});
