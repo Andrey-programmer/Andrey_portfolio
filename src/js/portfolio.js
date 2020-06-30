@@ -26,3 +26,12 @@ $('.card-deck:eq(2) .card:first').click(() => {
 $('.card-deck:eq(2) .card:nth-of-type(2)').click(() => {
    window.open("https://polar-coast-11040.herokuapp.com/courses", '_blank') || location.assign('#');
 });
+
+
+// На тильде
+$('.card-deck:eq(3) .card:nth-of-type(2)').click(() => {
+   window.open("https://uroki-akvareli.ru", '_blank') || location.assign('#');
+});
+$('.card-deck:eq(3) .card:first').click(() => {
+   window.open("https://aliandr-dance.ru", '_blank') || location.assign('#');
+});
